@@ -6,12 +6,14 @@
     <title>Socket.io</title>
 </head>
 <body>
+    <p id="updatemsg"></p>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io()
-        socket.on("connect", ()=>{
+    socket.on("connect", ()=>{
             socket.on("broadcast", (msg)=>{
-                document.write(msg)
+                document.getElementById("updatemsg").innerText=""
+                 document.getElementById('updatemsg').innerText=msg
             })
         })
     </script>
