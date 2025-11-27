@@ -2,6 +2,7 @@ import express from 'express';
 const app = express();
 
 import fs from 'fs';
+import { Socket } from 'socket.io';
 
 app.use(express.urlencoded({ extended: true }));
 
